@@ -1,0 +1,19 @@
+{
+  "name": "rowanmap",
+  "version": "1.0.0",
+  "description": "User file to track usernames and clicks users make on buildings",
+  "main": "users.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonyMJD/RowanMap.git"
+  },
+  "author": "Anthony DeSantis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnthonyMJD/RowanMap/issues"
+  },
+  "homepage": "https://github.com/AnthonyMJD/RowanMap#readme"
+}
