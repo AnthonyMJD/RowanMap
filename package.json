@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AnthonyMJD/RowanMap/issues"
   },
-  "homepage": "https://github.com/AnthonyMJD/RowanMap#readme"
+  "homepage": "https://github.com/AnthonyMJD/RowanMap#readme",
+  "dependencies": {
+    "leaflet": "^1.7.1"
+  }
 }
