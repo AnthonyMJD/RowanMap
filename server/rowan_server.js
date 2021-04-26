@@ -1,3 +1,6 @@
+
+//https://www.tutorialsteacher.com/nodejs/create-nodejs-web-server
+
 var http = require('http'); // Import Node.js core module
 
 var server = http.createServer(function (req, res) {   //create web server
@@ -11,10 +14,10 @@ var server = http.createServer(function (req, res) {   //create web server
         res.end();
     
     }
-    else if (req.url == "/student") {
+    else if (req.url == "/login") {
         
         res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write('<html><body><p>This is student Page.</p></body></html>');
+        res.write('<html><body><p>This is login Page.</p></body></html>');
         res.end();
     
     }
