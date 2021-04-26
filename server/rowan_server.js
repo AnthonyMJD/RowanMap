@@ -2,6 +2,7 @@
 //https://www.tutorialsteacher.com/nodejs/create-nodejs-web-server
 
 var http = require('http'); // Import Node.js core module
+var fs = require('fs');
 
 var server = http.createServer(function (req, res) {   //create web server
     if (req.url == '/') { //check the URL of the current request
@@ -21,16 +22,21 @@ var server = http.createServer(function (req, res) {   //create web server
         res.end();
     
     }
-    else if (req.url == "/admin") {
+    else if (req.url == "/map") {
+        fs.readFile('./map.html', function (err, html) {
+
+            if (err) throw err;    
         
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write('<html><body><p>This is admin Page.</p></body></html>');
-        res.end();
+                res.writeHeader(200, {"Content-Type": "text/html"});  
+                res.write(html);  
+                res.end();  
+            })
+    }  
     
-    }
+    
     else
         res.end('Invalid Request!');
-
+    
 });
 
 server.listen(5000); //6 - listen for any incoming requests
