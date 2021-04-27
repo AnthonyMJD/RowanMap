@@ -12,4 +12,6 @@ fs.readFile('./map.html', function (err, html) {
         response.write(html);  
         response.end();  
     }).listen(PORT);
+    
+    console.log('Rowan Map web server at port 8080 is running..')
 });

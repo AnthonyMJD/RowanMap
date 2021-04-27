@@ -41,4 +41,4 @@ var server = http.createServer(function (req, res) {   //create web server
 
 server.listen(5000); //6 - listen for any incoming requests
 
-console.log('Node.js web server at port 5000 is running..')
+console.log('Rowan Map web server at port 5000 is running..')
