@@ -1,11 +1,16 @@
 /* map.js */
 
+map.set('views', './views');
+map.set('view engine', 'pug');
+map.use('./users', userRouter); // what is userRouter?
+
 // adding everything we need
 var http = require("http");
 var qString = require("querystring");
 
 // this calls the let db={}; and instantiates the db for us
 let dbManager = require('./dbManager');
+let express = require("express");
 let app = express();
 var ObjectID = require('mongodb').ObjectId;
 // var userRouter = require('./routes/userRoutes.js') check if needed and if so update path
@@ -14,10 +19,7 @@ var ObjectID = require('mongodb').ObjectId;
 let mongoose = require('mongoose');
 mongoose.set('bufferCommands', false);
 // const actCol=require('./models/activitySchema'); check if needed and update path 
-
-map.set('views', './views');
-map.set('view engine', 'pug');
-map.use('./users', userRouter); // what is userRouter? 
+ 
 
 // GET ROUTES 
 // copied from https://github.com/ProfJake/Final_Version_Act_Server/blob/master/express_act_serv/app.js
@@ -58,3 +60,4 @@ map.get('/insert', function (req, res){
     	res.render('insert', {trusted: req.session.user});
 	}
 });
+
