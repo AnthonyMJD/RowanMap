@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AnthonyMJD/RowanMap#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "leaflet": "^1.7.1"
   }
 }

@@ -7,6 +7,7 @@ map.use('./users', userRouter); // what is userRouter?
 // adding everything we need
 var http = require("http");
 var qString = require("querystring");
+let mapApp = require("app");
 
 // this calls the let db={}; and instantiates the db for us
 let dbManager = require('./dbManager');

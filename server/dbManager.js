@@ -1,4 +1,6 @@
 /* dbManager.js
+Nick Eggert
+Added for reference and possible implementation
 
 Code adapted from: 
 https://github.com/ProfJake/Final_Version_Act_Server/blob/master/express_act_serv/dbManager.js
