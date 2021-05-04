@@ -1,5 +1,10 @@
 h1 {
-    color: rgb(94, 62, 4);
-}
-
-/* Just a placeholder for now */
+    color: blue;
+  }
+  #activity {
+    border-style: groove;
+    border-color: purple;
+  }
+  a:hover {
+    color: yellow;
+  }

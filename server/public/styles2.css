@@ -1,0 +1,10 @@
+h1 {
+    color: gold;
+  }
+  #activity {
+    border-style: dashed;
+    border-color: darkgray;
+  }
+  a:hover {
+    color: red;
+  }

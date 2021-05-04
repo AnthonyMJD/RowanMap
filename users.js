@@ -19,7 +19,7 @@ const UserSchema = new mongoose.Schema({
     }
 });
 
-mongoose.connect(/*'mongodb://localhost:27017/studentDB', ////connect our db here*/ {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(/mongodb:localhost:27017/RowanMap, {useNewUrlParser: true, useUnifiedTopology: true});
 
 const User = mongoose.model("User", UserSchema);
 const newUser = new User();
