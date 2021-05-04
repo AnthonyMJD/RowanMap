@@ -26,35 +26,38 @@ map.use('./users', userRouter); // what is userRouter?
 //They sit "in the middle" between your app's backend end functionality
 //(in this case, the simple Activity Class, MongoDB, and/or the local
 //"server" filesystem) and the client.  Middleware function's 
-map.get('/', function (req, res){
-	if (!req.session.user){
-        res.redirect('/login');
-    }
-    else{
-
-    	res.render('index', {trusted: req.session.user});
-	}
-
-});
-map.use(function(req, res, next){
-    let now = new Date().toLocaleTimeString("en-US", {timeZone: "America/New_York"});
-    console.log(`${req.method} Request to ${req.path} Route Received: ${now}`);
-    next();
-});
-
-map.get('/login', function(req, res, next){
-    if (req.session.user){
-        res.redirect('/');
-    }else{
-        res.render('login');
-    }
-});
-map.get('/insert', function (req, res){
-	if (!req.session.user){
-        res.redirect('/login');
-    }
-    else{
-
-    	res.render('insert', {trusted: req.session.user});
-	}
-});
+http.createServer(  (req, res)=>
+{
+    map.get('/', function (req, res){
+        if (!req.session.user){
+            res.redirect('/login');
+        }
+        else{
+    
+            res.render('index', {trusted: req.session.user});
+        }
+    
+    });
+    map.use(function(req, res, next){
+        let now = new Date().toLocaleTimeString("en-US", {timeZone: "America/New_York"});
+        console.log(`${req.method} Request to ${req.path} Route Received: ${now}`);
+        next();
+    });
+    
+    map.get('/login', function(req, res, next){
+        if (req.session.user){
+            res.redirect('/');
+        }else{
+            res.render('login');
+        }
+    });
+    map.get('/insert', function (req, res){
+        if (!req.session.user){
+            res.redirect('/login');
+        }
+        else{
+    
+            res.render('insert', {trusted: req.session.user});
+        }
+    });
+}).listen(5000);
