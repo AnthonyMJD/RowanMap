@@ -52,7 +52,6 @@ db.collection('users').insertOne(data,function(err, collection){
         })
 })
   
-  
 app.get('/',function(req,res){
 res.set({
     'Access-control-Allow-Origin': '*'
