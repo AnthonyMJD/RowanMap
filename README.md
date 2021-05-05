@@ -1,15 +1,23 @@
 # RowanMap
 // Requirements:
+// Retrieve the program files by doing git clone https://github.com/AnthonyMJD/RowanMap.git
+
+// CD into RowanMap and then CD into server
+
 // npm install leaflet, body-parser, express, mongodb
-// Make sure you navigate into the 'server' folder, then run 'node app.js' to start the application.
-//
-//
-// Nick Eggert
-//
-// so far added RowanCampusMap.png and leaflet.js 
-// run 'npm install leaflet' to add leaflet to your local machine
-// 
-// Anthony DeSantis
-// So far we have setup the map with the locations we will be displaying with information on them
-// The program can be ran so far by doing node rowan_server.js and it runs on port 5000
-// To see the map, it is localhost:3000/map
+
+// To get Database run in the terminal: mongorestore --nsInclude=RowanMap.users dump/
+
+// Navigate into the 'server' folder, then run 'node app.js' to start the application.
+
+// The server runs on localhost:3000
+
+// Sources:
+// https://www.geeksforgeeks.org/signup-form-using-nodejs-and-mongodb/
+// https://github.com/ProfJake
+// https://leafletjs.com/index.html
+// https://rowan.edu
+// https://stackoverflow.com
+
+
+
