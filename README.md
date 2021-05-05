@@ -19,5 +19,7 @@
 // https://rowan.edu
 // https://stackoverflow.com
 
+//PROBLEM WITH LOGIN CREATING USERS INSTEAD OF LOOKING FOR INFO IN THE DATABASE TO SEE IF A USER EXISTS
+
 
 
