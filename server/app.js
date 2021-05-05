@@ -62,9 +62,9 @@ app.post('/login', function(req,res){
         "email":email,
         "password":pass,
     }
-db.collection('users').find(data,function(err, collection){
+db.collection('users').findOne(data,function(err, isMatch){
         if (err) throw err;
-        console.log("Record inserted Successfully");
+        console.log("Login Successfully");
               
     });
           
