@@ -1,5 +1,7 @@
-//website helping us setup a signup page
-//https://www.geeksforgeeks.org/signup-form-using-nodejs-and-mongodb/
+// Anthony worked on signup page and creating the server
+// Nick worked on GET and POST routes and the different views
+// Evan worked on login page and CSS styling
+// Gitanna worked on map.html and gathering info on buildings
 
 
 var express=require("express");
@@ -42,7 +44,7 @@ db.collection('users').insertOne(data,function(err, collection){
               
     });
           
-    fs.readFile('./map.html', function (err, html) {
+    fs.readFile('./views/map.html', function (err, html) {
 
         if (err) throw err;    
     
@@ -68,7 +70,7 @@ db.collection('users').findOne(data,function(err, isMatch){
               
     });
           
-    fs.readFile('./map.html', function (err, html) {
+    fs.readFile('./views/map.html', function (err, html) {
 
         if (err) throw err;    
     
@@ -82,7 +84,7 @@ app.get('/login', function(req, res){
     res.set({
         'Access-control-Allow-Origin': '*'
         });
-        fs.readFile('./login.html', function (err, html) {
+        fs.readFile('./views/login.html', function (err, html) {
     
             if (err) throw err;    
         
@@ -97,7 +99,7 @@ app.get('/',function(req,res){
 res.set({
     'Access-control-Allow-Origin': '*'
     });
-    fs.readFile('./index.html', function (err, html) {
+    fs.readFile('./views/index.html', function (err, html) {
 
         if (err) throw err;    
     
