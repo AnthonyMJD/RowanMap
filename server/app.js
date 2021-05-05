@@ -51,7 +51,48 @@ db.collection('users').insertOne(data,function(err, collection){
             res.end();  
         })
 })
+
+
+
+app.post('/login', function(req,res){
+    var email =req.body.email;
+    var pass = req.body.password;
   
+    var data = {
+        "email":email,
+        "password":pass,
+    }
+db.collection('users').find(data,function(err, collection){
+        if (err) throw err;
+        console.log("Record inserted Successfully");
+              
+    });
+          
+    fs.readFile('./map.html', function (err, html) {
+
+        if (err) throw err;    
+    
+            res.writeHeader(200, {"Content-Type": "text/html"});  
+            res.write(html);  
+            res.end();  
+        })
+})
+  
+app.get('/login', function(req, res){
+    res.set({
+        'Access-control-Allow-Origin': '*'
+        });
+        fs.readFile('./login.html', function (err, html) {
+    
+            if (err) throw err;    
+        
+                res.writeHeader(200, {"Content-Type": "text/html"});  
+                res.write(html);  
+                res.end();  
+            })
+
+})  
+
 app.get('/',function(req,res){
 res.set({
     'Access-control-Allow-Origin': '*'
