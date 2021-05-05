@@ -1,0 +1,1 @@
+{"options":{"validator":{"activity":{"$in":["walking","swimming","running"]}}},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"}],"uuid":"11c28a35a7374884893bd98d0c1598e5","collectionName":"otherValidDB"}
